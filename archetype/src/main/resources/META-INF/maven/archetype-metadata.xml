@@ -113,6 +113,36 @@
                 <include>*</include>
             </includes>
         </fileSet>
+        <fileSet filtered="false" packaged="false">
+            <directory>src/test/resources/apps/InternationalMountains.app/Base.lproj/Main.storyboardc</directory>
+            <includes>
+                <include>*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="false" packaged="false">
+            <directory>src/test/resources/apps/InternationalMountains.app/Base.lproj/Main.storyboardc/UIViewController-rS3-R9-Ivy.nib</directory>
+            <includes>
+                <include>*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="false" packaged="false">
+            <directory>src/test/resources/apps/InternationalMountains.app/Base.lproj/Main.storyboardc/UIViewController-Ah7-4n-0Wa.nib</directory>
+            <includes>
+                <include>*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="false" packaged="false">
+            <directory>src/test/resources/apps/InternationalMountains.app/Base.lproj/Main.storyboardc/Ah7-4n-0Wa-view-MMQ-IT-qOo.nib</directory>
+            <includes>
+                <include>*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="false" packaged="false">
+            <directory>src/test/resources/apps/InternationalMountains.app/Base.lproj/Main.storyboardc/pGg-6v-bdr-view-mLL-gJ-YKr.nib</directory>
+            <includes>
+                <include>*</include>
+            </includes>
+        </fileSet>
     </fileSets>
 
 </archetype-descriptor>

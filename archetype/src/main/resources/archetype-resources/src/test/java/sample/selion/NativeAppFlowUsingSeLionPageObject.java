@@ -15,17 +15,29 @@
 
 package ${package}.sample.selion;
 
+import com.paypal.selion.configuration.Config;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import com.paypal.selion.reports.runtime.MobileReporter;
 import static org.testng.Assert.assertTrue;
 import com.paypal.selion.annotations.MobileTest;
 import ${package}.sample.NativeAppTestPage;
+import java.net.URL;
 
 /**
  * This test class demonstrates how to use SeLion PageObject model for running tests against a Native  iOS app.
  *
  */
 public class NativeAppFlowUsingSeLionPageObject {
+
+    private static final String appFolder = "/apps";
+
+    @BeforeClass
+    public void setup() {
+        URL url = IOSNativeAppDemoTest.class.getResource(appFolder);
+        Config.setConfigProperty(Config.ConfigProperty.SELENIUM_NATIVE_APP_FOLDER, url.getPath());
+    }
 
     // Through this annotation we let SeLion know that we would be needing an iOS Simulator spawned and made ready.
     @MobileTest(appName = "InternationalMountains")
@@ -52,4 +64,9 @@ public class NativeAppFlowUsingSeLionPageObject {
         MobileReporter.log(samplePage.getSampleUIAStaticText().getAttribute("name"), true);
     }
 
+    @AfterClass
+    public void teardown() {
+        Config.setConfigProperty(Config.ConfigProperty.SELENIUM_NATIVE_APP_FOLDER,
+                Config.ConfigProperty.SELENIUM_NATIVE_APP_FOLDER.getDefaultValue());
+    }
 }

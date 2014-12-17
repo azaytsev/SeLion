@@ -33,6 +33,7 @@
                     <include>*.xml</include>
                     <include>*.txt</include>
                     <include>testdata/**</include>
+                    <include>apps/**</include>
                 </includes>
             </testResource>
         </testResources>
